@@ -13,8 +13,7 @@
 
 @interface DKTriangleSlider()
 
-@property (nonatomic, strong) CALayer *line1Layer;
-@property (nonatomic, strong) CALayer *line2Layer;
+@property (nonatomic, strong) NSArray *lineArray;
 @property (nonatomic, strong) DKTriangleSliderTrackLayer *trackLayer;
 @property (nonatomic, strong) DKTriangleSliderValueLayer *fillLayer;
 @property (nonatomic) CGPoint previousTouchPoint;
@@ -31,19 +30,21 @@
     
     if (self)
     {
+        _max = 3;
         _trackLayer = [DKTriangleSliderTrackLayer layer];
         _trackLayer.slider = self;
         [self.layer addSublayer:_trackLayer];
         
-        _line1Layer = [CALayer layer];
-        _line1Layer.backgroundColor = [UIColor whiteColor].CGColor;
-        _line1Layer.zPosition = 10;
-        [self.layer addSublayer:_line1Layer];
-        
-        _line2Layer = [CALayer layer];
-        _line2Layer.backgroundColor = [UIColor whiteColor].CGColor;
-        _line2Layer.zPosition = 10;
-        [self.layer addSublayer:_line2Layer];
+        NSMutableArray *temp = [NSMutableArray new];
+        for (int i = 1; i < _max; i ++)
+        {
+            CALayer *layer = [CALayer layer];
+            layer.backgroundColor = [UIColor whiteColor].CGColor;
+            layer.zPosition = 10;
+            [self.layer addSublayer:layer];
+            [temp addObject:layer];
+        }
+        _lineArray = [NSArray arrayWithArray:temp];
         
         _fillLayer = [DKTriangleSliderValueLayer layer];
         _fillLayer.slider = self;
@@ -60,7 +61,7 @@
 {
     if (value < 0) value = 0;
     
-    if (value > 3) value = 3;
+    if (value > self.max) value = self.max;
     
     _value = value;
 
@@ -76,10 +77,14 @@
     _trackLayer.frame = self.bounds;
     _fillLayer.frame = self.bounds;
     
-    CGFloat a = self.bounds.size.width / 3.0;
+    CGFloat a = self.bounds.size.width / self.max;
     CGFloat h = self.bounds.size.height;
-    _line1Layer.frame = CGRectMake(a, 0, 1, h);
-    _line2Layer.frame = CGRectMake(2 * a, 0, 1, h);
+    
+    for (int i = 1; i < self.max; i ++)
+    {
+        CALayer *layer = self.lineArray[i - 1];
+        layer.frame = CGRectMake(i * a, 0, 1, h);
+    }
     
     [_trackLayer setNeedsDisplay];
     [_fillLayer setNeedsDisplay];
@@ -98,7 +103,7 @@
 {
     if (! self.enabled) return;
     
-    CGFloat a = self.bounds.size.width / 3.0;
+    CGFloat a = self.bounds.size.width / self.max;
     _value = ceil(point.x / a);
     
     if (_value <= 0)
@@ -106,9 +111,9 @@
         _value = 1;
     }
     
-    if (_value >= 3)
+    if (_value >= self.max)
     {
-        _value = 3;
+        _value = self.max;
     }
 
     [self setLayerFrames];

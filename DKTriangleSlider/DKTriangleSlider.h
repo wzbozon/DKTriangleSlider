@@ -13,4 +13,9 @@
 @property (nonatomic, strong) IBInspectable UIColor *valueColor;
 @property (nonatomic) IBInspectable NSInteger value;
 
+/**
+ The maximum value of the slider.
+ */
+@property (nonatomic, assign) IBInspectable NSInteger max;
+
 @end

@@ -43,7 +43,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ra8-tg-g8J"/>
+                                    <action selector="triangleSlider1ValueChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XnX-zk-mdq"/>
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3A-FC-dn6">
@@ -56,22 +56,63 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="w46-Ov-dVu">
+                                <rect key="frame" x="44" y="341" width="286" height="31"/>
+                                <connections>
+                                    <action selector="sliderTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="elP-EL-yYJ"/>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="SKs-aR-o7k"/>
+                                </connections>
+                            </slider>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F7D-1q-kOJ" customClass="DKTriangleSlider">
+                                <rect key="frame" x="46" y="471" width="282" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="282" id="KSb-9v-7op"/>
+                                    <constraint firstAttribute="height" constant="45" id="kfq-h8-edI"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                                        <color key="value" red="0.66274509800000003" green="0.7725490196" blue="0.81176470590000005" alpha="0.25" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="valueColor">
+                                        <color key="value" red="0.0" green="0.62745098040000002" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="triangleSlider2ValueChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WPb-vM-JPF"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="w46-Ov-dVu" firstAttribute="bottom" secondItem="XgL-vC-APq" secondAttribute="bottom" constant="15" id="8Ba-mp-3Sn"/>
+                            <constraint firstItem="F7D-1q-kOJ" firstAttribute="top" secondItem="w46-Ov-dVu" secondAttribute="bottom" constant="100" id="JIR-F7-ugf"/>
                             <constraint firstItem="R3A-FC-dn6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Myh-iz-z9H"/>
+                            <constraint firstItem="w46-Ov-dVu" firstAttribute="trailing" secondItem="XgL-vC-APq" secondAttribute="trailing" id="NVX-SE-Md6"/>
+                            <constraint firstItem="F7D-1q-kOJ" firstAttribute="leading" secondItem="XgL-vC-APq" secondAttribute="leading" id="Ptk-1r-RPB"/>
+                            <constraint firstItem="F7D-1q-kOJ" firstAttribute="trailing" secondItem="XgL-vC-APq" secondAttribute="trailing" id="RIM-NO-VSm"/>
                             <constraint firstItem="XgL-vC-APq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="agK-h0-OWT"/>
                             <constraint firstItem="XgL-vC-APq" firstAttribute="top" secondItem="R3A-FC-dn6" secondAttribute="bottom" constant="100" id="al5-GL-ZwO"/>
                             <constraint firstItem="XgL-vC-APq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qmq-hs-eg0"/>
+                            <constraint firstItem="w46-Ov-dVu" firstAttribute="leading" secondItem="XgL-vC-APq" secondAttribute="leading" id="y6I-Xe-HvC"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="slider" destination="XgL-vC-APq" id="SMA-dW-GVo"/>
+                        <outlet property="slider" destination="w46-Ov-dVu" id="Brf-lb-OeF"/>
+                        <outlet property="tringleSlider1" destination="XgL-vC-APq" id="MQE-St-kr2"/>
+                        <outlet property="tringleSlider2" destination="F7D-1q-kOJ" id="PQa-0y-Are"/>
                         <outlet property="valueLabel" destination="R3A-FC-dn6" id="IY6-cq-QvT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
         </scene>
     </scenes>
 </document>

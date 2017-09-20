@@ -30,7 +30,7 @@
     
     if (self)
     {
-        _max = 3;
+        _max = 5;
         _trackLayer = [DKTriangleSliderTrackLayer layer];
         _trackLayer.slider = self;
         [self.layer addSublayer:_trackLayer];

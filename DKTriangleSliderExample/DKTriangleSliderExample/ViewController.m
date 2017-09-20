@@ -20,9 +20,6 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.tringleSlider1.backgroundColor = [UIColor clearColor];
-    self.tringleSlider2.backgroundColor = [UIColor clearColor];
     self.valueLabel.text = nil;
 }
 

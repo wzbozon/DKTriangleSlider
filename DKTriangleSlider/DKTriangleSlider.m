@@ -24,36 +24,48 @@
 @implementation DKTriangleSlider
 
 
+// IBDesignable works only for code in drawRect
+- (void)drawRect:(CGRect)rect
+{
+    _trackLayer = [DKTriangleSliderTrackLayer layer];
+    _trackLayer.slider = self;
+    [self.layer addSublayer:_trackLayer];
+    
+    _fillLayer = [DKTriangleSliderValueLayer layer];
+    _fillLayer.slider = self;
+    [self.layer addSublayer:_fillLayer];
+    
+    NSMutableArray *temp = [NSMutableArray new];
+    for (int i = 1; i < _maxValue; i ++)
+    {
+        CALayer *layer = [CALayer layer];
+        layer.backgroundColor = [UIColor whiteColor].CGColor;
+        layer.zPosition = 10;
+        [self.layer addSublayer:layer];
+        [temp addObject:layer];
+    }
+    _lineArray = [NSArray arrayWithArray:temp];
+    
+    [self setLayerFrames];
+}
+
+
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
     
     if (self)
     {
-        _max = 5;
-        _trackLayer = [DKTriangleSliderTrackLayer layer];
-        _trackLayer.slider = self;
-        [self.layer addSublayer:_trackLayer];
-        
-        NSMutableArray *temp = [NSMutableArray new];
-        for (int i = 1; i < _max; i ++)
-        {
-            CALayer *layer = [CALayer layer];
-            layer.backgroundColor = [UIColor whiteColor].CGColor;
-            layer.zPosition = 10;
-            [self.layer addSublayer:layer];
-            [temp addObject:layer];
-        }
-        _lineArray = [NSArray arrayWithArray:temp];
-        
-        _fillLayer = [DKTriangleSliderValueLayer layer];
-        _fillLayer.slider = self;
-        [self.layer addSublayer:_fillLayer];
-        
-        [self setLayerFrames];
+          
     }
     
     return self;
+}
+
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
 }
 
 
@@ -61,7 +73,7 @@
 {
     if (value < 0) value = 0;
     
-    if (value > self.max) value = self.max;
+    if (value > self.maxValue) value = self.maxValue;
     
     _value = value;
 
@@ -77,10 +89,10 @@
     _trackLayer.frame = self.bounds;
     _fillLayer.frame = self.bounds;
     
-    CGFloat a = self.bounds.size.width / self.max;
+    CGFloat a = self.bounds.size.width / self.maxValue;
     CGFloat h = self.bounds.size.height;
     
-    for (int i = 1; i < self.max; i ++)
+    for (int i = 1; i < self.maxValue; i ++)
     {
         CALayer *layer = self.lineArray[i - 1];
         layer.frame = CGRectMake(i * a, 0, 1, h);
@@ -103,7 +115,7 @@
 {
     if (! self.enabled) return;
     
-    CGFloat a = self.bounds.size.width / self.max;
+    CGFloat a = self.bounds.size.width / self.maxValue;
     _value = ceil(point.x / a);
     
     if (_value <= 0)
@@ -111,9 +123,9 @@
         _value = 1;
     }
     
-    if (_value >= self.max)
+    if (_value >= self.maxValue)
     {
-        _value = self.max;
+        _value = self.maxValue;
     }
 
     [self setLayerFrames];

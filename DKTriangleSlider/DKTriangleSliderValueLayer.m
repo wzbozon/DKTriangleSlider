@@ -17,7 +17,7 @@
     CGFloat layerHeight = self.bounds.size.height;
     CGFloat layerWidth = self.bounds.size.width;
     
-    CGFloat a = layerWidth / self.slider.max;
+    CGFloat a = layerWidth / self.slider.maxValue;
     CGFloat tangent = layerHeight / layerWidth;
     
     CGFloat w = a * self.slider.value;

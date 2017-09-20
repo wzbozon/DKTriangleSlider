@@ -7,15 +7,17 @@
 
 #import <UIKit/UIKit.h>
 
+IB_DESIGNABLE
+
 @interface DKTriangleSlider : UIControl
 
 @property (nonatomic, strong) IBInspectable UIColor *trackColor;
 @property (nonatomic, strong) IBInspectable UIColor *valueColor;
-@property (nonatomic) IBInspectable NSInteger value;
+@property (nonatomic, assign) IBInspectable NSInteger value;
 
 /**
  The maximum value of the slider.
  */
-@property (nonatomic, assign) IBInspectable NSInteger max;
+@property (nonatomic, assign) IBInspectable NSInteger maxValue;
 
 @end

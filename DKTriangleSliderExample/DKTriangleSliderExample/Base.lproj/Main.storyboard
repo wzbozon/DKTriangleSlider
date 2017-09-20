@@ -23,7 +23,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XgL-vC-APq" customClass="DKTriangleSlider">
                                 <rect key="frame" x="46" y="311" width="282" height="45"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="282" id="kHT-nI-yQX"/>
                                     <constraint firstAttribute="height" constant="45" id="scr-WL-PdG"/>
@@ -36,9 +36,9 @@
                                         <color key="value" red="0.0" green="0.62745098040000002" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                        <integer key="value" value="2"/>
+                                        <integer key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
@@ -65,7 +65,7 @@
                             </slider>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F7D-1q-kOJ" customClass="DKTriangleSlider">
                                 <rect key="frame" x="46" y="471" width="282" height="45"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="282" id="KSb-9v-7op"/>
                                     <constraint firstAttribute="height" constant="45" id="kfq-h8-edI"/>
@@ -78,9 +78,9 @@
                                         <color key="value" red="0.0" green="0.62745098040000002" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                        <integer key="value" value="2"/>
+                                        <integer key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
@@ -89,7 +89,7 @@
                                 </connections>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="w46-Ov-dVu" firstAttribute="bottom" secondItem="XgL-vC-APq" secondAttribute="bottom" constant="15" id="8Ba-mp-3Sn"/>
                             <constraint firstItem="F7D-1q-kOJ" firstAttribute="top" secondItem="w46-Ov-dVu" secondAttribute="bottom" constant="100" id="JIR-F7-ugf"/>
@@ -112,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
+            <point key="canvasLocation" x="-481" y="-28"/>
         </scene>
     </scenes>
 </document>

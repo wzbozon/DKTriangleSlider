@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F85AC0061F72CB2E009C8B27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F85AC0051F72CB2E009C8B27 /* main.m */; };
+		F85AC0091F72CB2E009C8B27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F85AC0081F72CB2E009C8B27 /* AppDelegate.m */; };
+		F85AC00C1F72CB2E009C8B27 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F85AC00B1F72CB2E009C8B27 /* ViewController.m */; };
+		F85AC00F1F72CB2E009C8B27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F85AC00D1F72CB2E009C8B27 /* Main.storyboard */; };
+		F85AC0111F72CB2E009C8B27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F85AC0101F72CB2E009C8B27 /* Assets.xcassets */; };
+		F85AC0141F72CB2E009C8B27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F85AC0121F72CB2E009C8B27 /* LaunchScreen.storyboard */; };
+		F85AC01F1F72CB2E009C8B27 /* DKTriangleSliderExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F85AC01E1F72CB2E009C8B27 /* DKTriangleSliderExampleTests.m */; };
+		F85AC02A1F72CB2E009C8B27 /* DKTriangleSliderExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F85AC0291F72CB2E009C8B27 /* DKTriangleSliderExampleUITests.m */; };
+		F85AC03E1F72CB6C009C8B27 /* DKTriangleSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = F85AC0391F72CB6C009C8B27 /* DKTriangleSlider.m */; };
+		F85AC03F1F72CB6C009C8B27 /* DKTriangleSliderTrackLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F85AC03B1F72CB6C009C8B27 /* DKTriangleSliderTrackLayer.m */; };
+		F85AC0401F72CB6C009C8B27 /* DKTriangleSliderValueLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F85AC03D1F72CB6C009C8B27 /* DKTriangleSliderValueLayer.m */; };
+		F85AC0421F72CBB0009C8B27 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F85AC0411F72CBB0009C8B27 /* LICENSE */; };
+		F85AC0441F72CBB5009C8B27 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F85AC0431F72CBB5009C8B27 /* README.md */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F85AC01B1F72CB2E009C8B27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F85ABFF91F72CB2E009C8B27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F85AC0001F72CB2E009C8B27;
+			remoteInfo = DKTriangleSliderExample;
+		};
+		F85AC0261F72CB2E009C8B27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F85ABFF91F72CB2E009C8B27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F85AC0001F72CB2E009C8B27;
+			remoteInfo = DKTriangleSliderExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F85AC0011F72CB2E009C8B27 /* DKTriangleSliderExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DKTriangleSliderExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F85AC0051F72CB2E009C8B27 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F85AC0071F72CB2E009C8B27 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F85AC0081F72CB2E009C8B27 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F85AC00A1F72CB2E009C8B27 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F85AC00B1F72CB2E009C8B27 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F85AC00E1F72CB2E009C8B27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F85AC0101F72CB2E009C8B27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F85AC0131F72CB2E009C8B27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F85AC0151F72CB2E009C8B27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F85AC01A1F72CB2E009C8B27 /* DKTriangleSliderExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DKTriangleSliderExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F85AC01E1F72CB2E009C8B27 /* DKTriangleSliderExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKTriangleSliderExampleTests.m; sourceTree = "<group>"; };
+		F85AC0201F72CB2E009C8B27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F85AC0251F72CB2E009C8B27 /* DKTriangleSliderExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DKTriangleSliderExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F85AC0291F72CB2E009C8B27 /* DKTriangleSliderExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKTriangleSliderExampleUITests.m; sourceTree = "<group>"; };
+		F85AC02B1F72CB2E009C8B27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F85AC0381F72CB6C009C8B27 /* DKTriangleSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKTriangleSlider.h; sourceTree = "<group>"; };
+		F85AC0391F72CB6C009C8B27 /* DKTriangleSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKTriangleSlider.m; sourceTree = "<group>"; };
+		F85AC03A1F72CB6C009C8B27 /* DKTriangleSliderTrackLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKTriangleSliderTrackLayer.h; sourceTree = "<group>"; };
+		F85AC03B1F72CB6C009C8B27 /* DKTriangleSliderTrackLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKTriangleSliderTrackLayer.m; sourceTree = "<group>"; };
+		F85AC03C1F72CB6C009C8B27 /* DKTriangleSliderValueLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKTriangleSliderValueLayer.h; sourceTree = "<group>"; };
+		F85AC03D1F72CB6C009C8B27 /* DKTriangleSliderValueLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKTriangleSliderValueLayer.m; sourceTree = "<group>"; };
+		F85AC0411F72CBB0009C8B27 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../../LICENSE; sourceTree = "<group>"; };
+		F85AC0431F72CBB5009C8B27 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F85ABFFE1F72CB2E009C8B27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F85AC0171F72CB2E009C8B27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F85AC0221F72CB2E009C8B27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F85ABFF81F72CB2E009C8B27 = {
+			isa = PBXGroup;
+			children = (
+				F85AC0031F72CB2E009C8B27 /* DKTriangleSliderExample */,
+				F85AC01D1F72CB2E009C8B27 /* DKTriangleSliderExampleTests */,
+				F85AC0281F72CB2E009C8B27 /* DKTriangleSliderExampleUITests */,
+				F85AC0021F72CB2E009C8B27 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F85AC0021F72CB2E009C8B27 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F85AC0011F72CB2E009C8B27 /* DKTriangleSliderExample.app */,
+				F85AC01A1F72CB2E009C8B27 /* DKTriangleSliderExampleTests.xctest */,
+				F85AC0251F72CB2E009C8B27 /* DKTriangleSliderExampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F85AC0031F72CB2E009C8B27 /* DKTriangleSliderExample */ = {
+			isa = PBXGroup;
+			children = (
+				F85AC0371F72CB6C009C8B27 /* DKTriangleSlider */,
+				F85AC0071F72CB2E009C8B27 /* AppDelegate.h */,
+				F85AC0081F72CB2E009C8B27 /* AppDelegate.m */,
+				F85AC00A1F72CB2E009C8B27 /* ViewController.h */,
+				F85AC00B1F72CB2E009C8B27 /* ViewController.m */,
+				F85AC00D1F72CB2E009C8B27 /* Main.storyboard */,
+				F85AC0101F72CB2E009C8B27 /* Assets.xcassets */,
+				F85AC0121F72CB2E009C8B27 /* LaunchScreen.storyboard */,
+				F85AC0151F72CB2E009C8B27 /* Info.plist */,
+				F85AC0041F72CB2E009C8B27 /* Supporting Files */,
+			);
+			path = DKTriangleSliderExample;
+			sourceTree = "<group>";
+		};
+		F85AC0041F72CB2E009C8B27 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F85AC0431F72CBB5009C8B27 /* README.md */,
+				F85AC0411F72CBB0009C8B27 /* LICENSE */,
+				F85AC0051F72CB2E009C8B27 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F85AC01D1F72CB2E009C8B27 /* DKTriangleSliderExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				F85AC01E1F72CB2E009C8B27 /* DKTriangleSliderExampleTests.m */,
+				F85AC0201F72CB2E009C8B27 /* Info.plist */,
+			);
+			path = DKTriangleSliderExampleTests;
+			sourceTree = "<group>";
+		};
+		F85AC0281F72CB2E009C8B27 /* DKTriangleSliderExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F85AC0291F72CB2E009C8B27 /* DKTriangleSliderExampleUITests.m */,
+				F85AC02B1F72CB2E009C8B27 /* Info.plist */,
+			);
+			path = DKTriangleSliderExampleUITests;
+			sourceTree = "<group>";
+		};
+		F85AC0371F72CB6C009C8B27 /* DKTriangleSlider */ = {
+			isa = PBXGroup;
+			children = (
+				F85AC0381F72CB6C009C8B27 /* DKTriangleSlider.h */,
+				F85AC0391F72CB6C009C8B27 /* DKTriangleSlider.m */,
+				F85AC03A1F72CB6C009C8B27 /* DKTriangleSliderTrackLayer.h */,
+				F85AC03B1F72CB6C009C8B27 /* DKTriangleSliderTrackLayer.m */,
+				F85AC03C1F72CB6C009C8B27 /* DKTriangleSliderValueLayer.h */,
+				F85AC03D1F72CB6C009C8B27 /* DKTriangleSliderValueLayer.m */,
+			);
+			name = DKTriangleSlider;
+			path = ../../DKTriangleSlider;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F85AC0001F72CB2E009C8B27 /* DKTriangleSliderExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F85AC02E1F72CB2E009C8B27 /* Build configuration list for PBXNativeTarget "DKTriangleSliderExample" */;
+			buildPhases = (
+				F85ABFFD1F72CB2E009C8B27 /* Sources */,
+				F85ABFFE1F72CB2E009C8B27 /* Frameworks */,
+				F85ABFFF1F72CB2E009C8B27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DKTriangleSliderExample;
+			productName = DKTriangleSliderExample;
+			productReference = F85AC0011F72CB2E009C8B27 /* DKTriangleSliderExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F85AC0191F72CB2E009C8B27 /* DKTriangleSliderExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F85AC0311F72CB2E009C8B27 /* Build configuration list for PBXNativeTarget "DKTriangleSliderExampleTests" */;
+			buildPhases = (
+				F85AC0161F72CB2E009C8B27 /* Sources */,
+				F85AC0171F72CB2E009C8B27 /* Frameworks */,
+				F85AC0181F72CB2E009C8B27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F85AC01C1F72CB2E009C8B27 /* PBXTargetDependency */,
+			);
+			name = DKTriangleSliderExampleTests;
+			productName = DKTriangleSliderExampleTests;
+			productReference = F85AC01A1F72CB2E009C8B27 /* DKTriangleSliderExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F85AC0241F72CB2E009C8B27 /* DKTriangleSliderExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F85AC0341F72CB2E009C8B27 /* Build configuration list for PBXNativeTarget "DKTriangleSliderExampleUITests" */;
+			buildPhases = (
+				F85AC0211F72CB2E009C8B27 /* Sources */,
+				F85AC0221F72CB2E009C8B27 /* Frameworks */,
+				F85AC0231F72CB2E009C8B27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F85AC0271F72CB2E009C8B27 /* PBXTargetDependency */,
+			);
+			name = DKTriangleSliderExampleUITests;
+			productName = DKTriangleSliderExampleUITests;
+			productReference = F85AC0251F72CB2E009C8B27 /* DKTriangleSliderExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F85ABFF91F72CB2E009C8B27 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				TargetAttributes = {
+					F85AC0001F72CB2E009C8B27 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = XFV3M47D7P;
+						ProvisioningStyle = Automatic;
+					};
+					F85AC0191F72CB2E009C8B27 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = XFV3M47D7P;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F85AC0001F72CB2E009C8B27;
+					};
+					F85AC0241F72CB2E009C8B27 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = XFV3M47D7P;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F85AC0001F72CB2E009C8B27;
+					};
+				};
+			};
+			buildConfigurationList = F85ABFFC1F72CB2E009C8B27 /* Build configuration list for PBXProject "DKTriangleSliderExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F85ABFF81F72CB2E009C8B27;
+			productRefGroup = F85AC0021F72CB2E009C8B27 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F85AC0001F72CB2E009C8B27 /* DKTriangleSliderExample */,
+				F85AC0191F72CB2E009C8B27 /* DKTriangleSliderExampleTests */,
+				F85AC0241F72CB2E009C8B27 /* DKTriangleSliderExampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F85ABFFF1F72CB2E009C8B27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F85AC0141F72CB2E009C8B27 /* LaunchScreen.storyboard in Resources */,
+				F85AC0111F72CB2E009C8B27 /* Assets.xcassets in Resources */,
+				F85AC0421F72CBB0009C8B27 /* LICENSE in Resources */,
+				F85AC00F1F72CB2E009C8B27 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F85AC0181F72CB2E009C8B27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F85AC0231F72CB2E009C8B27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F85ABFFD1F72CB2E009C8B27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F85AC00C1F72CB2E009C8B27 /* ViewController.m in Sources */,
+				F85AC03E1F72CB6C009C8B27 /* DKTriangleSlider.m in Sources */,
+				F85AC0091F72CB2E009C8B27 /* AppDelegate.m in Sources */,
+				F85AC0441F72CBB5009C8B27 /* README.md in Sources */,
+				F85AC0061F72CB2E009C8B27 /* main.m in Sources */,
+				F85AC03F1F72CB6C009C8B27 /* DKTriangleSliderTrackLayer.m in Sources */,
+				F85AC0401F72CB6C009C8B27 /* DKTriangleSliderValueLayer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F85AC0161F72CB2E009C8B27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F85AC01F1F72CB2E009C8B27 /* DKTriangleSliderExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F85AC0211F72CB2E009C8B27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F85AC02A1F72CB2E009C8B27 /* DKTriangleSliderExampleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F85AC01C1F72CB2E009C8B27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F85AC0001F72CB2E009C8B27 /* DKTriangleSliderExample */;
+			targetProxy = F85AC01B1F72CB2E009C8B27 /* PBXContainerItemProxy */;
+		};
+		F85AC0271F72CB2E009C8B27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F85AC0001F72CB2E009C8B27 /* DKTriangleSliderExample */;
+			targetProxy = F85AC0261F72CB2E009C8B27 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F85AC00D1F72CB2E009C8B27 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F85AC00E1F72CB2E009C8B27 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F85AC0121F72CB2E009C8B27 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F85AC0131F72CB2E009C8B27 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F85AC02C1F72CB2E009C8B27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F85AC02D1F72CB2E009C8B27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F85AC02F1F72CB2E009C8B27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XFV3M47D7P;
+				INFOPLIST_FILE = DKTriangleSliderExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alwawee.DKTriangleSliderExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F85AC0301F72CB2E009C8B27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XFV3M47D7P;
+				INFOPLIST_FILE = DKTriangleSliderExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alwawee.DKTriangleSliderExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F85AC0321F72CB2E009C8B27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = XFV3M47D7P;
+				INFOPLIST_FILE = DKTriangleSliderExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alwawee.DKTriangleSliderExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DKTriangleSliderExample.app/DKTriangleSliderExample";
+			};
+			name = Debug;
+		};
+		F85AC0331F72CB2E009C8B27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = XFV3M47D7P;
+				INFOPLIST_FILE = DKTriangleSliderExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alwawee.DKTriangleSliderExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DKTriangleSliderExample.app/DKTriangleSliderExample";
+			};
+			name = Release;
+		};
+		F85AC0351F72CB2E009C8B27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = XFV3M47D7P;
+				INFOPLIST_FILE = DKTriangleSliderExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alwawee.DKTriangleSliderExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DKTriangleSliderExample;
+			};
+			name = Debug;
+		};
+		F85AC0361F72CB2E009C8B27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = XFV3M47D7P;
+				INFOPLIST_FILE = DKTriangleSliderExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alwawee.DKTriangleSliderExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DKTriangleSliderExample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F85ABFFC1F72CB2E009C8B27 /* Build configuration list for PBXProject "DKTriangleSliderExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F85AC02C1F72CB2E009C8B27 /* Debug */,
+				F85AC02D1F72CB2E009C8B27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F85AC02E1F72CB2E009C8B27 /* Build configuration list for PBXNativeTarget "DKTriangleSliderExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F85AC02F1F72CB2E009C8B27 /* Debug */,
+				F85AC0301F72CB2E009C8B27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F85AC0311F72CB2E009C8B27 /* Build configuration list for PBXNativeTarget "DKTriangleSliderExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F85AC0321F72CB2E009C8B27 /* Debug */,
+				F85AC0331F72CB2E009C8B27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F85AC0341F72CB2E009C8B27 /* Build configuration list for PBXNativeTarget "DKTriangleSliderExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F85AC0351F72CB2E009C8B27 /* Debug */,
+				F85AC0361F72CB2E009C8B27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F85ABFF91F72CB2E009C8B27 /* Project object */;
+}

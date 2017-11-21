@@ -65,4 +65,12 @@
 }
 
 
+- (IBAction)constantValueSwitched:(id)sender
+{
+    UISwitch *switchView = (UISwitch *)sender;
+    
+    self.tringleSlider2.constantValue = switchView.on ? 1 : 0;
+}
+
+
 @end

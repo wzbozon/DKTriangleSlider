@@ -24,16 +24,44 @@
 @implementation DKTriangleSlider
 
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    
+    if (self)
+    {
+        
+    }
+    
+    return self;
+}
+
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    
+    if (self.constantValue) _value = self.constantValue;
+}
+
+
 // IBDesignable works only for code in drawRect
 - (void)drawRect:(CGRect)rect
 {
-    _trackLayer = [DKTriangleSliderTrackLayer layer];
-    _trackLayer.slider = self;
-    [self.layer addSublayer:_trackLayer];
+    if (self.constantValue) _value = self.constantValue;
     
-    _fillLayer = [DKTriangleSliderValueLayer layer];
-    _fillLayer.slider = self;
-    [self.layer addSublayer:_fillLayer];
+    if (! _trackLayer)
+    {
+        _trackLayer = [DKTriangleSliderTrackLayer layer];
+        _trackLayer.frame = rect;
+        _trackLayer.slider = self;
+        [self.layer addSublayer:_trackLayer];
+        
+        _fillLayer = [DKTriangleSliderValueLayer layer];
+        _fillLayer.frame = rect;
+        _fillLayer.slider = self;
+        [self.layer addSublayer:_fillLayer];
+    }
     
     NSMutableArray *temp = [NSMutableArray new];
     for (int i = 1; i < _maxValue; i ++)
@@ -50,34 +78,35 @@
 }
 
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder
-{
-    self = [super initWithCoder:aDecoder];
-    
-    if (self)
-    {
-          
-    }
-    
-    return self;
-}
-
-
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-}
-
-
 - (void)setValue:(NSInteger)value
 {
-    if (value < 0) value = 0;
-    
-    if (value > self.maxValue) value = self.maxValue;
+    if (! self.enabled || self.constantValue) return;
     
     _value = value;
+    
+    //if (_value < 0) _value = 0;
+    
+    //if (_value > self.maxValue) _value = self.maxValue;
 
     [self setLayerFrames];
+}
+
+
+- (void)setEnabled:(BOOL)enabled
+{
+    [super setEnabled:enabled];
+    
+    [self setLayerFrames];
+}
+
+
+- (void)setConstantValue:(NSInteger)constantValue
+{
+    _constantValue = constantValue;
+    
+    self.value = _constantValue;
+    
+    [self setNeedsDisplay];
 }
 
 
@@ -85,9 +114,6 @@
 {
     [CATransaction begin];
     [CATransaction setDisableActions:YES];
-    
-    _trackLayer.frame = self.bounds;
-    _fillLayer.frame = self.bounds;
     
     CGFloat a = self.bounds.size.width / self.maxValue;
     CGFloat h = self.bounds.size.height;
@@ -113,7 +139,7 @@
 
 - (void)didTouchAtPoint:(CGPoint)point
 {
-    if (! self.enabled) return;
+    if (! self.enabled || self.constantValue) return;
     
     CGFloat a = self.bounds.size.width / self.maxValue;
     _value = ceil(point.x / a);

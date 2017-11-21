@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -36,7 +36,7 @@
                                         <color key="value" red="0.0" green="0.62745098040000002" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                        <integer key="value" value="3"/>
+                                        <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
                                         <integer key="value" value="5"/>
@@ -47,7 +47,7 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3A-FC-dn6">
-                                <rect key="frame" x="165" y="167" width="44" height="44"/>
+                                <rect key="frame" x="165" y="170" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="1Ab-MQ-Fyz"/>
                                     <constraint firstAttribute="width" constant="44" id="3eN-9n-eda"/>
@@ -64,7 +64,7 @@
                                 </connections>
                             </slider>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F7D-1q-kOJ" customClass="DKTriangleSlider">
-                                <rect key="frame" x="46" y="471" width="282" height="45"/>
+                                <rect key="frame" x="46" y="472" width="282" height="45"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="282" id="KSb-9v-7op"/>
@@ -88,20 +88,49 @@
                                     <action selector="triangleSlider2ValueChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WPb-vM-JPF"/>
                                 </connections>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Constant Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbI-fg-7LD">
+                                <rect key="frame" x="46" y="546" width="125" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="Fe5-2J-nDf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="E1g-Wc-kSQ">
+                                <rect key="frame" x="179" y="541" width="51" height="31"/>
+                                <connections>
+                                    <action selector="constantValueSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="qzz-O5-LEr"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="VbI-fg-7LD" firstAttribute="leading" secondItem="F7D-1q-kOJ" secondAttribute="leading" id="4Nx-MS-lg2"/>
                             <constraint firstItem="w46-Ov-dVu" firstAttribute="bottom" secondItem="XgL-vC-APq" secondAttribute="bottom" constant="15" id="8Ba-mp-3Sn"/>
                             <constraint firstItem="F7D-1q-kOJ" firstAttribute="top" secondItem="w46-Ov-dVu" secondAttribute="bottom" constant="100" id="JIR-F7-ugf"/>
                             <constraint firstItem="R3A-FC-dn6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Myh-iz-z9H"/>
                             <constraint firstItem="w46-Ov-dVu" firstAttribute="trailing" secondItem="XgL-vC-APq" secondAttribute="trailing" id="NVX-SE-Md6"/>
+                            <constraint firstItem="R3A-FC-dn6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="P6Y-FY-cVa"/>
+                            <constraint firstItem="F7D-1q-kOJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PNK-Nq-h4z"/>
                             <constraint firstItem="F7D-1q-kOJ" firstAttribute="leading" secondItem="XgL-vC-APq" secondAttribute="leading" id="Ptk-1r-RPB"/>
                             <constraint firstItem="F7D-1q-kOJ" firstAttribute="trailing" secondItem="XgL-vC-APq" secondAttribute="trailing" id="RIM-NO-VSm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="F7D-1q-kOJ" secondAttribute="bottom" constant="150" id="S9h-4q-Ur5"/>
                             <constraint firstItem="XgL-vC-APq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="agK-h0-OWT"/>
                             <constraint firstItem="XgL-vC-APq" firstAttribute="top" secondItem="R3A-FC-dn6" secondAttribute="bottom" constant="100" id="al5-GL-ZwO"/>
+                            <constraint firstItem="E1g-Wc-kSQ" firstAttribute="centerY" secondItem="VbI-fg-7LD" secondAttribute="centerY" id="cLm-Is-vbK"/>
+                            <constraint firstItem="E1g-Wc-kSQ" firstAttribute="leading" secondItem="VbI-fg-7LD" secondAttribute="trailing" constant="8" id="cum-wT-Xdf"/>
+                            <constraint firstItem="VbI-fg-7LD" firstAttribute="top" secondItem="F7D-1q-kOJ" secondAttribute="bottom" constant="30" id="pTU-lh-Fr7"/>
                             <constraint firstItem="XgL-vC-APq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qmq-hs-eg0"/>
                             <constraint firstItem="w46-Ov-dVu" firstAttribute="leading" secondItem="XgL-vC-APq" secondAttribute="leading" id="y6I-Xe-HvC"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="XgL-vC-APq"/>
+                                <exclude reference="w46-Ov-dVu"/>
+                                <exclude reference="VbI-fg-7LD"/>
+                                <exclude reference="E1g-Wc-kSQ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="slider" destination="w46-Ov-dVu" id="Brf-lb-OeF"/>

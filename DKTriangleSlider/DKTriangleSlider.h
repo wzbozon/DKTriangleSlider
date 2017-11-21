@@ -20,4 +20,9 @@ IB_DESIGNABLE
  */
 @property (nonatomic, assign) IBInspectable NSInteger maxValue;
 
+/**
+ If constant value is set, knob is not visible
+ */
+@property (nonatomic, assign) IBInspectable NSInteger constantValue;
+
 @end

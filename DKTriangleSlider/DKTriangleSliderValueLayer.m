@@ -21,6 +21,9 @@
     CGFloat tangent = layerHeight / layerWidth;
     
     CGFloat w = a * self.slider.value;
+    
+    if (! self.slider.enabled) w = 0;
+    
     CGFloat h = tangent * w;
     
     UIBezierPath *bezierPath = [[UIBezierPath alloc] init];

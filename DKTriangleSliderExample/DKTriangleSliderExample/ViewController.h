@@ -23,5 +23,7 @@
 
 - (IBAction)sliderTouchUpInside:(id)sender;
 
+- (IBAction)constantValueSwitched:(id)sender;
+
 @end
 

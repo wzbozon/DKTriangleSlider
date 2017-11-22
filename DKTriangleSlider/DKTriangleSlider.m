@@ -36,7 +36,6 @@
     return self;
 }
 
-
 - (void)awakeFromNib
 {
     [super awakeFromNib];
@@ -77,7 +76,6 @@
     [self setLayerFrames];
 }
 
-
 - (void)setValue:(NSInteger)value
 {
     if (! self.enabled || self.constantValue) return;
@@ -91,7 +89,6 @@
     [self setLayerFrames];
 }
 
-
 - (void)setEnabled:(BOOL)enabled
 {
     [super setEnabled:enabled];
@@ -99,16 +96,17 @@
     [self setLayerFrames];
 }
 
-
 - (void)setConstantValue:(NSInteger)constantValue
 {
     _constantValue = constantValue;
     
-    self.value = _constantValue;
+    if (_constantValue != 0)
+    {
+        self.value = _constantValue;
+    }
     
     [self setNeedsDisplay];
 }
-
 
 - (void)setLayerFrames
 {
@@ -130,12 +128,10 @@
     [CATransaction commit];
 }
 
-
 - (void)layoutSubviews
 {
     [self setLayerFrames];
 }
-
 
 - (void)didTouchAtPoint:(CGPoint)point
 {
@@ -159,7 +155,6 @@
     [self sendActionsForControlEvents:UIControlEventValueChanged];
 }
 
-
 - (BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event
 {
     CGPoint touchPoint = [touch locationInView:self];
@@ -168,7 +163,6 @@
     
     return YES;
 }
-
 
 - (BOOL)continueTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event
 {
@@ -179,11 +173,9 @@
     return YES;
 }
 
-
 - (void)endTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event
 {
     
 }
-
 
 @end

@@ -14,6 +14,8 @@
 
 - (void)drawInContext:(CGContextRef)ctx
 {
+    self.contentsScale = [[UIScreen mainScreen] scale];
+    
     CGFloat layerHeight = self.bounds.size.height;
     CGFloat layerWidth = self.bounds.size.width;
     
@@ -29,6 +31,5 @@
     CGContextSetFillColorWithColor(ctx, self.slider.trackColor.CGColor);
     CGContextFillPath(ctx);
 }
-
 
 @end

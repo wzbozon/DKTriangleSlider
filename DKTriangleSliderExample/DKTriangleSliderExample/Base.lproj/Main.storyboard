@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,54 +22,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XgL-vC-APq" customClass="DKTriangleSlider">
-                                <rect key="frame" x="46" y="311" width="282" height="45"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="282" id="kHT-nI-yQX"/>
-                                    <constraint firstAttribute="height" constant="45" id="scr-WL-PdG"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
-                                        <color key="value" red="0.66274509800000003" green="0.7725490196" blue="0.81176470590000005" alpha="0.25" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="valueColor">
-                                        <color key="value" red="0.0" green="0.62745098040000002" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="triangleSlider1ValueChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XnX-zk-mdq"/>
-                                </connections>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3A-FC-dn6">
-                                <rect key="frame" x="165" y="170" width="44" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="1Ab-MQ-Fyz"/>
-                                    <constraint firstAttribute="width" constant="44" id="3eN-9n-eda"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3A-FC-dn6">
+                                <rect key="frame" x="178.5" y="252.5" width="19" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="w46-Ov-dVu">
-                                <rect key="frame" x="44" y="341" width="286" height="31"/>
+                                <rect key="frame" x="34" y="587" width="307" height="31"/>
+                                <color key="minimumTrackTintColor" red="0.0" green="0.62745098040000002" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <action selector="sliderTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="elP-EL-yYJ"/>
                                     <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="SKs-aR-o7k"/>
                                 </connections>
                             </slider>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F7D-1q-kOJ" customClass="DKTriangleSlider">
-                                <rect key="frame" x="46" y="472" width="282" height="45"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="36" y="308.5" width="303" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="282" id="KSb-9v-7op"/>
-                                    <constraint firstAttribute="height" constant="45" id="kfq-h8-edI"/>
+                                    <constraint firstAttribute="height" constant="50" id="kfq-h8-edI"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
@@ -78,70 +49,74 @@
                                         <color key="value" red="0.0" green="0.62745098040000002" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                        <integer key="value" value="3"/>
+                                        <integer key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="triangleSlider2ValueChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WPb-vM-JPF"/>
+                                    <action selector="triangleSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Oyr-6X-N45"/>
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Constant Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbI-fg-7LD">
-                                <rect key="frame" x="46" y="546" width="125" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="125" id="Fe5-2J-nDf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="36" y="516" width="114.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="E1g-Wc-kSQ">
-                                <rect key="frame" x="179" y="541" width="51" height="31"/>
+                                <rect key="frame" x="158.5" y="511" width="51" height="31"/>
                                 <connections>
                                     <action selector="constantValueSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="qzz-O5-LEr"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DKTriangleSlider" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0h-i7-m20">
+                                <rect key="frame" x="114" y="70" width="147.5" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by Denis Kutlubaev kutlubaev.denis@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDU-Li-fh5">
+                                <rect key="frame" x="97" y="103" width="182" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="F7D-1q-kOJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="3Xh-CH-Mso"/>
                             <constraint firstItem="VbI-fg-7LD" firstAttribute="leading" secondItem="F7D-1q-kOJ" secondAttribute="leading" id="4Nx-MS-lg2"/>
-                            <constraint firstItem="w46-Ov-dVu" firstAttribute="bottom" secondItem="XgL-vC-APq" secondAttribute="bottom" constant="15" id="8Ba-mp-3Sn"/>
-                            <constraint firstItem="F7D-1q-kOJ" firstAttribute="top" secondItem="w46-Ov-dVu" secondAttribute="bottom" constant="100" id="JIR-F7-ugf"/>
+                            <constraint firstItem="u0h-i7-m20" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9c6-rm-cb1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="w46-Ov-dVu" secondAttribute="bottom" constant="50" id="DKW-we-T5X"/>
+                            <constraint firstItem="w46-Ov-dVu" firstAttribute="trailing" secondItem="F7D-1q-kOJ" secondAttribute="trailing" id="DTq-xq-5c0"/>
+                            <constraint firstItem="w46-Ov-dVu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EyH-Nr-pYc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="F7D-1q-kOJ" secondAttribute="trailing" constant="20" id="Ig9-R4-Wg3"/>
                             <constraint firstItem="R3A-FC-dn6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Myh-iz-z9H"/>
-                            <constraint firstItem="w46-Ov-dVu" firstAttribute="trailing" secondItem="XgL-vC-APq" secondAttribute="trailing" id="NVX-SE-Md6"/>
-                            <constraint firstItem="R3A-FC-dn6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="P6Y-FY-cVa"/>
-                            <constraint firstItem="F7D-1q-kOJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PNK-Nq-h4z"/>
-                            <constraint firstItem="F7D-1q-kOJ" firstAttribute="leading" secondItem="XgL-vC-APq" secondAttribute="leading" id="Ptk-1r-RPB"/>
-                            <constraint firstItem="F7D-1q-kOJ" firstAttribute="trailing" secondItem="XgL-vC-APq" secondAttribute="trailing" id="RIM-NO-VSm"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="F7D-1q-kOJ" secondAttribute="bottom" constant="150" id="S9h-4q-Ur5"/>
-                            <constraint firstItem="XgL-vC-APq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="agK-h0-OWT"/>
-                            <constraint firstItem="XgL-vC-APq" firstAttribute="top" secondItem="R3A-FC-dn6" secondAttribute="bottom" constant="100" id="al5-GL-ZwO"/>
+                            <constraint firstItem="F7D-1q-kOJ" firstAttribute="top" secondItem="R3A-FC-dn6" secondAttribute="bottom" constant="20" id="NWL-p6-FWF"/>
+                            <constraint firstItem="EDU-Li-fh5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uep-r3-h9t"/>
+                            <constraint firstItem="w46-Ov-dVu" firstAttribute="top" secondItem="VbI-fg-7LD" secondAttribute="bottom" constant="50" id="V64-Rq-wlh"/>
                             <constraint firstItem="E1g-Wc-kSQ" firstAttribute="centerY" secondItem="VbI-fg-7LD" secondAttribute="centerY" id="cLm-Is-vbK"/>
+                            <constraint firstItem="EDU-Li-fh5" firstAttribute="top" secondItem="u0h-i7-m20" secondAttribute="bottom" constant="8" id="ct9-ar-gl1"/>
                             <constraint firstItem="E1g-Wc-kSQ" firstAttribute="leading" secondItem="VbI-fg-7LD" secondAttribute="trailing" constant="8" id="cum-wT-Xdf"/>
-                            <constraint firstItem="VbI-fg-7LD" firstAttribute="top" secondItem="F7D-1q-kOJ" secondAttribute="bottom" constant="30" id="pTU-lh-Fr7"/>
-                            <constraint firstItem="XgL-vC-APq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qmq-hs-eg0"/>
-                            <constraint firstItem="w46-Ov-dVu" firstAttribute="leading" secondItem="XgL-vC-APq" secondAttribute="leading" id="y6I-Xe-HvC"/>
+                            <constraint firstItem="F7D-1q-kOJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hAE-OV-uHh"/>
+                            <constraint firstItem="w46-Ov-dVu" firstAttribute="leading" secondItem="F7D-1q-kOJ" secondAttribute="leading" id="og8-Pa-cGf"/>
+                            <constraint firstItem="F7D-1q-kOJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qWq-WH-DB7"/>
+                            <constraint firstItem="u0h-i7-m20" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="vLi-mj-88X"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="XgL-vC-APq"/>
-                                <exclude reference="w46-Ov-dVu"/>
-                                <exclude reference="VbI-fg-7LD"/>
-                                <exclude reference="E1g-Wc-kSQ"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="slider" destination="w46-Ov-dVu" id="Brf-lb-OeF"/>
-                        <outlet property="tringleSlider1" destination="XgL-vC-APq" id="MQE-St-kr2"/>
-                        <outlet property="tringleSlider2" destination="F7D-1q-kOJ" id="PQa-0y-Are"/>
+                        <outlet property="tringleSlider" destination="F7D-1q-kOJ" id="egL-TL-pGk"/>
                         <outlet property="valueLabel" destination="R3A-FC-dn6" id="IY6-cq-QvT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-481" y="-28"/>
+            <point key="canvasLocation" x="-1077.5999999999999" y="-108.39580209895054"/>
         </scene>
     </scenes>
 </document>

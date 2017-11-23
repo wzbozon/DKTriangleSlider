@@ -8,12 +8,6 @@
 
 #import "ViewController.h"
 
-
-@interface ViewController ()
-
-@end
-
-
 @implementation ViewController
 
 - (void)viewDidLoad
@@ -23,54 +17,29 @@
     self.valueLabel.text = nil;
 }
 
-
-- (IBAction)triangleSlider1ValueChanged:(id)sender
+- (IBAction)triangleSliderValueChanged:(id)sender
 {
-    self.valueLabel.text = [NSString stringWithFormat:@"%ld", self.tringleSlider1.value];
-    self.slider.value = self.tringleSlider1.value;
-    self.tringleSlider2.value = self.tringleSlider1.value;
+    self.valueLabel.text = [NSString stringWithFormat:@"%ld", self.tringleSlider.value];
+    self.slider.value = self.tringleSlider.value;
+    self.tringleSlider.value = self.tringleSlider.value;
 }
-
-
-- (IBAction)triangleSlider2ValueChanged:(id)sender
-{
-    self.valueLabel.text = [NSString stringWithFormat:@"%ld", self.tringleSlider2.value];
-    self.slider.value = self.tringleSlider2.value;
-    self.tringleSlider1.value = self.tringleSlider2.value;
-}
-
 
 - (IBAction)sliderValueChanged:(id)sender
 {
     long roundValue = lroundf(self.slider.value);
     self.valueLabel.text = [NSString stringWithFormat:@"%ld", roundValue];
-    self.tringleSlider1.value = roundValue;
-    self.tringleSlider2.value = roundValue;
+    self.tringleSlider.value = roundValue;
 }
-
-
-- (IBAction)sliderTouchUpInside:(id)sender
-{
-    return;
-    
-    /*
-    // Action Hooked to 'Touch Up Inside' (when user releases knob)
-    // Adjust knob (to rounded value)
-    long roundValue = lroundf(self.slider.value);
-    if (self.slider.value != roundValue) {
-        // Almost 100% of the time - Adjust:
-        self.slider.value = roundValue;
-    }
-    */
-}
-
 
 - (IBAction)constantValueSwitched:(id)sender
 {
+    // I am using ReactiveCocoa to do this kind of things
+    // But I do not want to add a dependency to this example project
     UISwitch *switchView = (UISwitch *)sender;
-    
-    self.tringleSlider2.constantValue = switchView.on ? 1 : 0;
+    self.tringleSlider.constantValue = switchView.on ? 3 : 0;
+    self.valueLabel.text = @"3";
+    self.slider.enabled = ! switchView.on;
+    self.slider.value = 3;
 }
-
 
 @end

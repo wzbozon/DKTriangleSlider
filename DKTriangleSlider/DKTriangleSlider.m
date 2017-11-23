@@ -23,19 +23,6 @@
 
 @implementation DKTriangleSlider
 
-
-- (instancetype)initWithCoder:(NSCoder *)aDecoder
-{
-    self = [super initWithCoder:aDecoder];
-    
-    if (self)
-    {
-        
-    }
-    
-    return self;
-}
-
 - (void)awakeFromNib
 {
     [super awakeFromNib];
@@ -43,8 +30,6 @@
     if (self.constantValue) _value = self.constantValue;
 }
 
-
-// IBDesignable works only for code in drawRect
 - (void)drawRect:(CGRect)rect
 {
     if (self.constantValue) _value = self.constantValue;
@@ -81,10 +66,6 @@
     if (! self.enabled || self.constantValue) return;
     
     _value = value;
-    
-    //if (_value < 0) _value = 0;
-    
-    //if (_value > self.maxValue) _value = self.maxValue;
 
     [self setLayerFrames];
 }
@@ -140,9 +121,9 @@
     CGFloat a = self.bounds.size.width / self.maxValue;
     _value = ceil(point.x / a);
     
-    if (_value <= 0)
+    if (_value <= self.minValue)
     {
-        _value = 1;
+        _value = self.minValue;
     }
     
     if (_value >= self.maxValue)

@@ -21,6 +21,11 @@ IB_DESIGNABLE
 @property (nonatomic, assign) IBInspectable NSInteger maxValue;
 
 /**
+ The minimum value of the slider.
+ */
+@property (nonatomic, assign) IBInspectable NSInteger minValue;
+
+/**
  If constant value is set, knob is not visible
  */
 @property (nonatomic, assign) IBInspectable NSInteger constantValue;
